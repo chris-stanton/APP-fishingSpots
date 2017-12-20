@@ -1,0 +1,648 @@
+
+/*reset*/
+* {
+  padding: 0px;
+  margin: 0px;
+  font: 12px;
+  font-family: serif sans-serif;
+}
+
+/*removing default link styling*/
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*setting app display size*/
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/*main container is entire width and height of body*/
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*low temp*/
+.text-blue {
+  color: #0012ff;
+}
+/*optimal temp*/
+.text-orange {
+  color: #ff7300;
+}
+/*high temp*/
+.text-red {
+  color: #ff0000;
+}
+/*status message*/
+.text-purple {
+  color: #f900fe;
+}
+/*light on*/
+.text-yellow {
+  color: #faff00;
+}
+/*motor on*/
+.text-green {
+  color: #41fa00;
+}
+/*low temp*/
+.text-shadow-blue {
+  text-shadow: 0px 0px 50px #0012ff;
+}
+/*optimal temp*/
+.text-shadow-orange {
+  text-shadow: 0px 0px 50px #ff7300;
+}
+/*high temp*/
+.text-shadow-red {
+  text-shadow: 0px 0px 50px #ff0000;
+}
+/*status message*/
+.text-shadow-purple {
+  text-shadow: 0px 0px 50px #f900fe;
+}
+/*light on*/
+.text-shadow-yellow {
+  text-shadow: 0px 0px 50px #faff00;
+}
+/*motor on*/
+.text-shadow-green {
+  text-shadow: 0px 0px 50px #41fa00;
+}
+
+
+/*alert message styling*/
+.alertMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.alertMessage img {
+  height: 25px;
+  padding-right: 5px;
+}
+
+
+
+
+/*====================*/
+/*                    */
+/*     AUTH VIEWS     */
+/*                    */
+/*====================*/
+/*login and registration main container*/
+.flex-login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  .flex-login-container .login-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin-top: 20px;
+  }
+    .login-message-container h1 {
+      color: #ff0000;
+      text-shadow: 1px 1px 1px #ffffff;
+      font-size: 2em;
+      text-align: center;
+    }
+  .flex-login-container .login-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+    .login-input-container img {
+      width: 10vw;
+      margin: 20px 0px 40px 0px;
+    }
+    /*.login-input-container img:hover {
+      -webkit-animation: login-img 2.5s infinite linear;
+      animation: login-img 2.5s infinite linear;
+    }*/
+    .login-input-container input {
+      width: 30%;
+      height: 28px;
+      margin: 5px 0px;
+    }
+    .login-input-container button {
+      width: 20%;
+      height: 40px;
+      margin: 15px 0px;
+      background-color: #244bd7;
+      color: #ffffff;
+      outline: none;
+      cursor: pointer;
+    }
+    .login-input-container a {
+      font-size: 0.9em;
+      color: #ffffff;
+      margin-top: 20px;
+    }
+    .login-input-container a:hover {
+      color: #244bd7;
+    }
+
+
+
+
+
+
+
+/*====================*/
+/*                    */
+/*      MAIN VIEW     */
+/*                    */
+/*====================*/
+/*logout button*/
+.flex-logout-container span {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px;
+  font-size: 0.9em;
+}
+.flex-logout-container img {
+  height: 20px;
+}
+
+/*row one container*/
+main .row-one {
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+}
+
+  /*temp container*/
+  .row-one .flex-temp-main_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+    .flex-temp-main_container h6 {
+      font-size: 1em;
+    }
+    .flex-temp-main_container h1 {
+      font-size: 2.5em;
+      font-family: fantasy;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+
+  /*rpm container*/
+  .row-one .flex-rpm-main_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+    .flex-rpm-main_container h6 {
+      font-size: 1em;
+    }
+    .flex-rpm-main_container h1 {
+      font-size: 2.5em;
+      font-family: fantasy;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+
+
+
+/*row two container*/
+main .row-two {
+  display: flex;
+  flex-direction: row;
+  height: 40vh;
+  align-items: center;
+}
+
+  /*video container*/
+  .row-two .flex-video-main_container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+    .flex-video-main_container img {
+      height: 100%;
+      width: 60%;
+    }
+
+
+
+/*row three container*/
+main .row-three {
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+  align-items: center;
+}
+
+  /*light container*/
+  .row-three .flex-light-main_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+    .flex-light-main_container h6 {
+      font-size: 1em;
+    }
+    .flex-light-main_container h1 {
+      font-size: 2.5em;
+      font-family: fantasy;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+
+  /*vaccum container*/
+  .row-three .flex-vacuum-main_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+    .flex-vacuum-main_container h6 {
+      font-size: 1em;
+    }
+    .flex-vacuum-main_container h1 {
+      font-size: 2.5em;
+      font-family: fantasy;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+
+  /*fan container*/
+  .row-three .flex-fan-main_container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+    .flex-fan-main_container h6 {
+      font-size: 1em;
+    }
+    .flex-fan-main_container h1 {
+      font-size: 2.5em;
+      font-family: fantasy;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+
+
+
+
+
+
+/*====================*/
+/*                    */
+/*      SUB VIEWS     */
+/*                    */
+/*====================*/
+
+/*TEMPERATURE sub view main container*/
+.flex-main-temp {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+}
+  /*TEMPERATURE data output container*/
+  .flex-main-temp .temp-output-container {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 100px 0px 20px 0px;
+  }
+    .flex-main-temp h1 {
+      font-size: 10em;
+      /*text-shadow: 3px 3px 3px #ffffff;*/
+    }
+    .flex-main-temp  h6{
+      font-size: 2em;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+  /*TEMPERATURE radio container*/
+  .flex-main-temp .temp-radio-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .temp-radio-container input {
+      width: 50%;
+      cursor: pointer;
+    }
+  /*TEMPERATURE chart container*/
+  .flex-main-temp .temp-chart-container {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 150px;
+    width: 340px;
+  }
+
+
+
+
+
+/*RPM sub view main container*/
+.flex-main-rpm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+}
+  /*RPM data output container*/
+  .flex-main-rpm .rpm-output-container {
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 100px 0px 20px 0px;
+  }
+    .flex-main-rpm h1 {
+      font-size: 10em;
+      /*text-shadow: 3px 3px 3px #ffffff;*/
+    }
+    .flex-main-rpm  h6{
+      font-size: 2em;
+      text-shadow: 1px 1px 1px #ffffff;
+    }
+  /*RPM radio container*/
+  .flex-main-rpm .rpm-radio-container {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .rpm-radio-container input {
+      width: 50%;
+      cursor: pointer;
+    }
+
+
+
+/*VIDEO sub view main container*/
+.flex-main-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+}
+  .flex-main-video .flex-videodata-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;*/
+    margin-top: 20px;
+    }
+      .flex-videodata-container .flex-videostats-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1em;
+        margin: 20px;
+        border: 1px solid #ffffff;
+      }
+        .flex-videostats-container .flex-dataDisplay-container {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        .flex-dataDisplay-container h5 {
+          margin: 15px;
+          font-size: 1.2em;
+        }
+        .flex-dataDisplay-container h6 {
+          margin: 20px;
+          font-size: 0.9em;
+        }
+      .flex-videodata-container .flex-videofeed-container {
+        display: flex;
+        flex: 7;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0px;
+        width: 100%;
+      }
+        .flex-videofeed-container img {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+          width: 80%;
+        }
+
+
+
+/*LIGHT sub view main container*/
+.flex-main-light {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+  color: #ffffff;
+}
+  .flex-main-light .light-output-container {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .light-output-container h1 {
+      font-size: 10em;
+    }
+  .flex-main-light .light-button-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .light-button-container form {
+      margin: 25px;
+    }
+    form input {
+      margin: 0px 20px;
+      cursor: pointer;
+      /*height: 100%;*/
+    }
+
+
+
+/*VACUUM sub view main container*/
+.flex-main-vacuum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+  color: #ffffff;
+}
+  .flex-main-vacuum .vacuum-output-container {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .vacuum-output-container h1 {
+      font-size: 10em;
+    }
+  .flex-main-vacuum .vacuum-button-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .vacuum-button-container form {
+      margin: 25px;
+    }
+    form input {
+      margin: 0px 20px;
+      cursor: pointer;
+      /*height: 100%;*/
+    }
+
+
+
+
+/*FAN sub view main container*/
+.flex-main-fan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: fantasy;
+  color: #ffffff;
+}
+  .flex-main-fan .fan-output-container {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .fan-output-container h1 {
+      font-size: 10em;
+    }
+  .flex-main-fan .fan-button-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+    .fan-button-container form {
+      margin: 25px;
+    }
+    form input {
+      margin: 0px 20px;
+      cursor: pointer;
+      /*height: 100%;*/
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*sub footer container*/
+.sub-footer {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: baseline;
+  height: 100%;
+  width: 100%;
+}
+  .sub-footer img {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    height: 5vh;
+    margin-left: 40px;
+  }
+  .sub-footer span {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    height: 5vh;
+    margin-right: 40px;
+    font-family: fantasy;
+    color: #f90bd3;
+  }

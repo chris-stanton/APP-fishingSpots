@@ -1,0 +1,123 @@
+
+@media(max-width: 650px) {
+
+/*====================*/
+/*                    */
+/*      MAIN VIEW     */
+/*                    */
+/*====================*/
+
+  /*row one container*/
+  main .row-one {
+    flex-direction: row;
+  }
+    /*temp container*/
+    .row-one .flex-temp-main_container {
+      flex-direction: row;
+      width: 90%;
+      margin: 5px 0px;
+    }
+    /*rpm container*/
+    .row-one .flex-rpm-main_container {
+      flex-direction: row;
+      width: 90%;
+      margin: 5px 0px;
+    }
+
+
+
+  /*row two container*/
+  main .row-two {
+    flex-direction: column;
+  }
+    .flex-video-main_container img {
+      width: 90%;
+    }
+
+
+
+  /*row three container*/
+  main .row-three {
+    flex-direction: row;
+  }
+    /*light container*/
+    .row-three .flex-light-main_container {
+      flex-direction: row;
+      width: 90%;
+      margin: 5px 0px;
+    }
+    /*vacuum container*/
+    .row-three .flex-vacuum-main_container {
+      flex-direction: row;
+      width: 90%;
+      margin: 5px 0px;
+    }
+    /*fan container*/
+    .row-three .flex-fan-main_container {
+      flex-direction: row;
+      width: 90%;
+      margin: 5px 0px;
+    }
+
+
+
+
+/*====================*/
+/*                    */
+/*     AUTH VIEWS     */
+/*                    */
+/*====================*/
+.login-input-container img {
+  width: 30vw;
+  margin: 30px 0px;
+}
+.login-input-container input {
+  width: 70%;
+}
+.login-input-container button {
+  width: 60%;
+}
+
+
+
+
+
+
+
+/*====================*/
+/*                    */
+/*      SUB VIEWS     */
+/*                    */
+/*====================*/
+
+/*temp radio button width*/
+  .temp-radio-container input {
+    width: 80%;
+  }
+
+  .flex-main-video .flex-videodata-container {
+    display: flex;
+    flex-direction: column;
+  }
+    .flex-videodata-container .flex-videostats-container {
+      flex-direction: row;
+    }
+      .flex-videofeed-container img {
+        width: 90%;
+      }
+
+  .flex-main-temp .temp-output-container {
+    margin: 60px 0px 20px 0px;
+  }
+
+  .flex-main-temp .temp-chart-container {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    /*align-content: center;*/
+    /*border: 1px solid white;*/
+  }
+
+
+
+}
