@@ -1,0 +1,12 @@
+
+/*alert message styling*/
+.alertMessage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.alertMessage img {
+  height: 25px;
+  padding-right: 5px;
+}
