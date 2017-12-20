@@ -13,7 +13,7 @@ const user = require('./server/routes/auth/user.js');
 const register = require('./server/routes/auth/register.js');
 
 // defining other route files
-const arduino = require('./server/routes/arduino.js');
+const init = require('./server/routes/init.js');
 
 // serve back static files
 app.use(express.static(path.join(__dirname, './public')));
@@ -43,7 +43,7 @@ app.use(passport.session());
 app.use('/register', register);
 app.use('/user', user);
 
-app.use('/arduino', arduino);
+app.use('/init', init);
 
 app.use('/*', index); // catch
 
