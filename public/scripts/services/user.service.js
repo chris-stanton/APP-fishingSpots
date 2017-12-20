@@ -6,7 +6,7 @@ myApp.factory('UserService', function($http, $location, alertify){
   const userObject = {};
 
 // setting screen notifiaction position
-  alertify.logPosition('top right');
+  alertify.logPosition('bottom left');
 
 
   return {

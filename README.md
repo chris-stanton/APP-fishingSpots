@@ -1,10 +1,9 @@
 
-# Rod Building Hardware Contoller UI
+# Fishing Spots
 
 
 ## Description:
-###### UI to control my fishing rod dryers speed, fan speed, enclosure temperature and lights remotely.
-###### Live demo version: https://hardwareui.herokuapp.com/
+###### Using the Navionics web api, users will be able to view specific spots on lakes that will be holding fish for that specific time of year.
 
 
 ## Technologies Used:
@@ -14,8 +13,6 @@
   3. Angular.js
   4. Angular Route
   5. Node.js
-  6. Socket.io
-  7. Johnny-Five
   8. Body-Parser
   9. Bcrypt
   10. Dotenv
@@ -25,16 +22,6 @@
   14. Alertify.js
   15. GIT / GitHub
   16. Heroku
-
-#### Hardware
-  1. Arduino ONU
-  2. Arduino Capable Monitor (edit Arduino code to specific display)
-  3. 24vDC Power Supply
-  4. 24vDC 50RPM Motor
-  5. DIN Rail w/ Terminal Blocks (refer to system drawing)
-  6. 24vDC 1800RPM Fan
-  7. 24vDC 500RPM Fan
-  8. 12vDC RGB Light Kit w/ Controller
 
 
 

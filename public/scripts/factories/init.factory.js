@@ -5,7 +5,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 
 
 // setting screen notifiaction position
-  alertify.logPosition('top right');
+  alertify.logPosition('bottom left');
 
   function init() {
     // logged in alert message
