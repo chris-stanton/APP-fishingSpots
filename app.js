@@ -4,8 +4,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
-const passport = require('./server/strategies/user_sql.js');
 const session = require('express-session');
+const passport = require('./server/strategies/user_sql.js');
+const sessionConfig = require('./server/modules/session.config.js');
 
 // defining auth routes
 const index = require('./server/routes/auth/index.js');
@@ -27,13 +28,7 @@ app.get('/', (req, res) => {
 
 
 // Passport Session Configuration
-app.use(session({
-   secret: 'secret',
-   key: 'user',
-   resave: 'true',
-   saveUninitialized: false,
-   cookie: {maxage: 60000, secure: false}
-}));
+app.use(sessionConfig);
 
 // starts up passport session
 app.use(passport.initialize());
