@@ -1,5 +1,5 @@
 
-// requiring dependancies
+// defining node/module dependancies
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -16,6 +16,7 @@ const register = require('./server/routes/auth/register.js');
 // defining other route files
 const init = require('./server/routes/init.js');
 
+
 // serve back static files
 app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json());
@@ -26,21 +27,21 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-
-// Passport Session Configuration
+// passport session configuration
 app.use(sessionConfig);
 
 // starts up passport session
 app.use(passport.initialize());
 app.use(passport.session());
 
-// routes
+// auth routes
 app.use('/register', register);
 app.use('/user', user);
-
+// other routes
 app.use('/init', init);
+// catch
+app.use('/*', index);
 
-app.use('/*', index); // catch
 
 // port listening on
 app.set('port', process.env.PORT || 5000);
