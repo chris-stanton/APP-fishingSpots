@@ -19,16 +19,6 @@ body {
   width: 100vw;
 }
 
-.logout-icon {
-  height: 20px;
-}
-
-/* navionics map placeholder */
-.test_map_div {
-  margin: 0;
-  width: 100%;
-  height: 70%;
-}
 
 /*====================*/
 /*                    */
@@ -110,4 +100,52 @@ body {
     .login-input-container a:hover {
       color: #244bd7;
       text-shadow: 2px 2px 2px #000000;
+    }
+
+
+
+/*====================*/
+/*                    */
+/*     MAIN VIEW      */
+/*                    */
+/*====================*/
+
+/* logout icon image */
+.logout-icon {
+  height: 20px;
+}
+
+
+
+.flex-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+  .flex-main-container .flex-main_nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    height: 6%;
+    background-color: #244bd7;
+    color: #ffffff;
+  }
+    .flex-main_nav-container label {
+      margin-left: 20px;
+    }
+
+  .flex-main-container .flex-main_map-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 94%;
+  }
+    .test_map_div {
+      margin: 0;
+      width: 100%;
+      height: 100%;
     }
