@@ -1,7 +1,6 @@
 
 
 <section class="flex-main-container">
-
   <section class="flex-main_nav-container">
     <span ng-click="mc.logout()"><img ng-src="../assets/images/icons/logout.ico" class="logout-icon"> LOGOUT </span>
     <div class="leading_div">
@@ -14,6 +13,9 @@
       <label> Time of Year </label>
         <input type="date">
     </div>
+    <!-- <div ng-repeat="weather in mc.weatherResponse">
+      <p>{{weather.daily.data[0]}}</p>
+    </div> -->
   </section>
 
   <section class="flex-main_map-container" data-root="https://webapiv2.navionics.com/dist/webapi/images">

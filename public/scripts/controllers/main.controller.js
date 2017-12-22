@@ -5,13 +5,17 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
 
   const self = this;
 
+  InitFactory.getWeather();
+  self.weatherResponse = InitFactory.weatherResponse;
+  console.log(self.weatherResponse);
+
 
   // logout button click listener
   self.logout = () => {
     UserService.logout();
   }
 
-  
+
   var webapi = new JNC.Views.BoatingNavionicsMap({
               tagId: '.test_map_div',
               center: [  12.0, 46.0 ],

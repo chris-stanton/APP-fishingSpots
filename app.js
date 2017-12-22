@@ -14,7 +14,7 @@ const user = require('./server/routes/auth/user.js');
 const register = require('./server/routes/auth/register.js');
 
 // defining other route files
-const init = require('./server/routes/init.js');
+const weather = require('./server/routes/weather.js');
 
 
 // serve back static files
@@ -38,7 +38,7 @@ app.use(passport.session());
 app.use('/register', register);
 app.use('/user', user);
 // other routes
-app.use('/init', init);
+app.use('/weather', weather);
 // catch
 app.use('/*', index);
 
