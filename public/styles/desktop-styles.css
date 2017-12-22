@@ -54,13 +54,14 @@ body {
     align-items: center;
     height: 100px;
     width: 100%;
-    margin-top: 20px;
+    /* margin-top: 20px; */
   }
     .login-message-container h1 {
       color: #ff0000;
       text-shadow: 1px 1px 1px #ffffff;
       font-size: 2em;
       text-align: center;
+      align-items: center;
     }
   .flex-login-container .login-input-container {
     display: flex;
@@ -70,8 +71,20 @@ body {
     width: 100%;
   }
     .login-input-container img {
-      width: 10vw;
-      margin: 20px 0px 40px 0px;
+      width: 20vw;
+      margin: 0px 0px 50px 0px;
+    }
+    .login-input-container h1 {
+      display: flex;
+      flex-direction: row;
+      width: 20vw;
+      margin: 0px 0px 50px 0px;
+      text-align: center;
+      justify-content: center;
+      font-size: 3.5em;
+      color: #ffffff;
+      text-shadow: 4px 4px 4px #000000;
+      overflow: visible;
     }
     .login-input-container input {
       width: 30%;
@@ -89,9 +102,12 @@ body {
     }
     .login-input-container a {
       font-size: 0.9em;
-      color: #244bd7;
+      /* color: #244bd7; */
+      color: #ffffff;
       margin-top: 20px;
+      text-shadow: 1px 1px 1px #000000;
     }
     .login-input-container a:hover {
-      color: #000000;
+      color: #244bd7;
+      text-shadow: 2px 2px 2px #000000;
     }
