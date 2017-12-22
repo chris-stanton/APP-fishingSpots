@@ -23,7 +23,7 @@ body {
   height: 20px;
 }
 
-
+/* navionics map placeholder */
 .test_map_div {
   margin: 0;
   width: 100%;
@@ -41,6 +41,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('../assets/images/backgrounds/auth.png');
+  background-size: cover;
+  background-repeat: none;
+  height: 100vh;
+  width: 100vw;
 }
   .flex-login-container .login-message-container {
     display: flex;
