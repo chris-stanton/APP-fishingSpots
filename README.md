@@ -23,10 +23,11 @@
   10. Dotenv
   11. PassportJS
   12. Passport-local
-  <!-- 13. PG -->
-  14. Alertify.js
-  15. GIT / GitHub
-  16. Heroku
+  13. PG
+  14. Path
+  15. Alertify.js
+  16. GIT / GitHub
+  17. Heroku
 
 
 
