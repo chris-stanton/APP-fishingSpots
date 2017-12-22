@@ -7,7 +7,10 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 // setting screen notifiaction position
   alertify.logPosition('bottom left');
 
+// server side data response containers
+  let weatherResponse = { list:[] };
 
+// fires on init on,y
   function init() {
     // logged in alert message
     setTimeout(function() {
@@ -20,10 +23,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
   };
   init();
 
-
-
-  let weatherResponse = { list:[] };
-
+// get weather from server/api on main controller init
   function getWeather() {
     $http({
       method: 'GET',
@@ -33,7 +33,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
     }).then(function(response) {
       weatherResponse.list = response.data;
     });
-  }
+  };
 
 
 
