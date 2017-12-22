@@ -7,6 +7,8 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 // setting screen notifiaction position
   alertify.logPosition('bottom left');
 
+
+
   function init() {
     // logged in alert message
     setTimeout(function() {
@@ -19,6 +21,18 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
   };
 
   init();
+
+  // $http({
+  //     method: 'GET',
+  //     url: 'https://api.darksky.net/forecast/f754c9bf44ea140ae951b2bee0fbe48c/37.8267,-122.4233',
+  //     headers: {
+  //
+  //     }
+  //   }).then(function(response) {
+  //     let weatherResponse = response.data;
+  //     console.log(weatherResponse);
+  //   });
+
 
 
   // public API
