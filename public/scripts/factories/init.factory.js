@@ -41,7 +41,6 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 
 
 
-
   // public API
   return {
     getWeather : getWeather,
