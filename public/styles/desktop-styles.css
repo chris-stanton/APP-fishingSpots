@@ -114,6 +114,14 @@ body {
 .logout-icon {
   height: 20px;
 }
+.temp_high {
+  color: #ff0000;
+  text-shadow: 1px 1px 1px #000000;
+}
+.temp_low {
+  color: #00d9ff;
+  text-shadow: 1px 1px 1px #000000;
+}
 
 
 
@@ -154,13 +162,14 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 20px;
+  text-shadow: 1px 1px 1px #000000;
 }
 
 
 .flex-main-container .flex-main_map-container {
   display: flex;
   flex-direction: row;
-  height: 84%;
+  height: 83%;
   width: 100vw;
 }
 .test_map_div {
@@ -172,12 +181,13 @@ body {
 .flex-main-container .flex-weather_nav-container {
   display: flex;
   flex-direction: row;
-  height: 8%;
+  height: 9%;
   width: 100vw;
   align-items: center;
   justify-content: center;
   background-color: #244bd7;
   color: #ffffff;
+  text-shadow: 1px 1px 1px #000000;
   overflow: scroll;
 }
 .flex-weather_nav-container div {
@@ -185,9 +195,15 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 20px;
+  margin: 0px 40px;
 }
 .flex-weather_nav-container span {
   display: flex;
   flex-direction: row;
+}
+.flex-weather_nav-container h4 {
+  text-decoration: underline;
+}
+.flex-weather_nav-container h6 {
+  padding-right: 4px;
 }

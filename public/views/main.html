@@ -1,12 +1,20 @@
 
 
 <section class="flex-main-container">
+
   <section class="flex-main_nav-container">
     <span ng-click="mc.logout()"><img ng-src="../assets/images/icons/logout.ico" class="logout-icon"> LOGOUT </span>
     <div class="leading_div">
       <label> Species</label>
         <select>
+          <option> Bluegill </option>
+          <option> Crappie </option>
+          <option> Perch </option>
           <option> Walleye </option>
+          <option> Northern Pike </option>
+          <option> Sturgeon </option>
+          <option> Catfish </option>
+          <option> White Fish </option>
         </select>
     </div>
     <div>
@@ -20,42 +28,42 @@
   </section>
 
   <section ng-repeat="weather in mc.weatherResponse" class="flex-weather_nav-container">
-  <!-- <div ng-repeat="weather in mc.weatherResponse"> -->
-    <div>
-      <h5> {{weather.daily.data[0].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[0].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[0].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4 ng-hide="weather.daily == null"> {{weather.daily.data[0].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[0].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[0].temperatureLow}}</h5></span>
     </div>
-    <div>
-      <h5> {{weather.daily.data[1].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[1].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[1].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4> {{weather.daily.data[1].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[1].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[1].temperatureLow}}</h5></span>
     </div>
-    <div>
-      <h5> {{weather.daily.data[2].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[2].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[2].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4> {{weather.daily.data[2].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[2].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[2].temperatureLow}}</h5></span>
     </div>
-    <div>
-      <h5> {{weather.daily.data[3].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[3].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[3].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4> {{weather.daily.data[3].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[3].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[3].temperatureLow}}</h5></span>
     </div>
-    <div>
-      <h5> {{weather.daily.data[4].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[4].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[4].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4> {{weather.daily.data[4].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[4].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[4].temperatureLow}}</h5></span>
     </div>
-    <div>
-      <h5> {{weather.daily.data[5].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[5].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[5].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4> {{weather.daily.data[5].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[5].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[5].temperatureLow}}</h5></span>
     </div>
-    <div>
-      <h5> {{weather.daily.data[6].time | date:'short'}} </h5>
-      <span><h6> High </h6><p>{{weather.daily.data[6].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[6].temperatureLow}}</p></span>
+    <div ng-hide="weather.daily == null">
+      <h4> {{weather.daily.data[6].time * 1000 | date:'MM-dd-yy'}} </h4>
+      <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[6].temperatureMax}}</h5></span>
+      <span><h6 class="temp_low"> Low </h6><h5>{{weather.daily.data[6].temperatureLow}}</h5></span>
     </div>
   </section>
+
 <!-- end of main container -->
 </section>
