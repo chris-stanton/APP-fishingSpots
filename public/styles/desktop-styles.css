@@ -190,14 +190,14 @@ body {
   background-color: #18358e;
   color: #ffffff;
   text-shadow: 2px 2px 2px #000000;
-
+  overflow: inherit;
 }
 .flex-weather_nav-container div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 40px;
+  margin: 0px 2em;
 }
 .flex-weather_nav-container span {
   display: flex;

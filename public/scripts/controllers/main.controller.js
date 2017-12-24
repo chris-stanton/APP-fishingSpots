@@ -1,14 +1,11 @@
 
 myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', function(InitFactory, UserService, alertify) {
 
-  console.log('MainController running...');
-
   const self = this;
 
   InitFactory.getWeather();
   self.weatherResponse = InitFactory.weatherResponse;
   console.log('weatherResponse ', self.weatherResponse);
-
 
   // logout button click listener
   self.logout = () => {

@@ -1,9 +1,6 @@
 
 myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', function($http, $location, alertify, UserService) {
 
-  console.log('InitFactory running...');
-
-
 // setting screen notifiaction position
   alertify.logPosition('top right');
 
@@ -47,5 +44,5 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
     getWeather : getWeather,
     weatherResponse : weatherResponse
   }
-
-}]); // end myAPP
+// end myAPP
+}]);

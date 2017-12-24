@@ -1,8 +1,6 @@
 
 myApp.factory('UserService', function($http, $location, alertify){
 
-  console.log('UserService Running...');
-
   const userObject = {};
 
 // setting screen notifiaction position
@@ -47,5 +45,6 @@ myApp.factory('UserService', function($http, $location, alertify){
       });
     }
 
-  }; //end return
-}); //end myApp
+  }; // end return
+// end myApp
+});
