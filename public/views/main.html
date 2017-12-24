@@ -28,6 +28,11 @@
   </section>
 
   <section ng-repeat="weather in mc.weatherResponse" class="flex-weather_nav-container">
+<!-- shows when location is not present -->
+    <div ng-show="weather.daily == null">
+      <h3> Searching for current location ... </h3>
+    </div>
+<!-- shows when location is present -->
     <div ng-hide="weather.daily == null">
       <h4 ng-hide="weather.daily == null"> {{weather.daily.data[0].time * 1000 | date:'MM-dd-yy'}} </h4>
       <span><h6 class="temp_high"> High </h6><h5>{{weather.daily.data[0].temperatureMax}}</h5></span>

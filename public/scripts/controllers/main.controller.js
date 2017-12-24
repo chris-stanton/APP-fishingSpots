@@ -19,14 +19,13 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
     UserService.logout();
   }
 
-
+  // displays navionics map
   var webapi = new JNC.Views.BoatingNavionicsMap({
-              tagId: '.test_map_div',
-              center: [  12.0, 46.0 ],
-              navKey: 'Navionics_support_00001'
-          });
-
-          webapi.showSonarControl(false);
+    tagId: '.test_map_div',
+    center: [  12.0, 46.0 ],
+    navKey: 'Need Key'
+  });
+  webapi.showSonarControl(false);
 
 
 
