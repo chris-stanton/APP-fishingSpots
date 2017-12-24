@@ -7,7 +7,11 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
 
   InitFactory.getWeather();
   self.weatherResponse = InitFactory.weatherResponse;
-  console.log(self.weatherResponse);
+  self.weatherResponse1 = InitFactory.weatherResponse1;
+  // var d = new Date(self.weatherResponse.list.daily.data[0].time);
+  // console.log(self.weatherResponse.list.daily.data[0].time);
+  // console.log(d);
+  console.log(self.weatherResponse1);
 
 
   // logout button click listener

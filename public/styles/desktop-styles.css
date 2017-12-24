@@ -125,65 +125,69 @@ body {
   height: 100vh;
   width: 100vw;
 }
-  .flex-main-container .flex-main_nav-container {
-    display: flex;
-    flex-direction: row;
-    height: 8%;
-    align-items: center;
-    width: 100vw;
-    background-color: #244bd7;
-    color: #ffffff;
-  }
-    .flex-main_nav-container span {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-left: 20px;
-    }
-    .flex-main_nav-container span:hover {
-      cursor: pointer;
-    }
-    .flex-main_nav-container .leading_div {
-      margin-left: 60px;
-    }
-    .flex-main_nav-container div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px;
-    }
 
-  .flex-main-container .flex-main_map-container {
-    display: flex;
-    flex-direction: row;
-    height: 84%;
-    width: 100vw;
-  }
-    .test_map_div {
-      height: 100%;
-      width: 100%;
-    }
 
-  .flex-main-container .flex-weather_nav-container {
-    display: flex;
-    flex-direction: row;
-    height: 8%;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    background-color: #244bd7;
-    color: #ffffff;
-  }
-    .flex-weather_nav-container div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin: 0px 20px;
-    }
-    .flex-weather_nav-container span {
-      display: flex;
-      flex-direction: row;
-      margin: 0px 20px;
-    }
+.flex-main-container .flex-main_nav-container {
+  display: flex;
+  flex-direction: row;
+  height: 8%;
+  align-items: center;
+  width: 100vw;
+  background-color: #244bd7;
+  color: #ffffff;
+}
+.flex-main_nav-container span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 20px;
+}
+.flex-main_nav-container span:hover {
+  cursor: pointer;
+}
+.flex-main_nav-container .leading_div {
+  margin-left: 60px;
+}
+.flex-main_nav-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+
+.flex-main-container .flex-main_map-container {
+  display: flex;
+  flex-direction: row;
+  height: 84%;
+  width: 100vw;
+}
+.test_map_div {
+  height: 100%;
+  width: 100%;
+}
+
+
+.flex-main-container .flex-weather_nav-container {
+  display: flex;
+  flex-direction: row;
+  height: 8%;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #244bd7;
+  color: #ffffff;
+  overflow: scroll;
+}
+.flex-weather_nav-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+}
+.flex-weather_nav-container span {
+  display: flex;
+  flex-direction: row;
+}

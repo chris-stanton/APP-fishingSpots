@@ -22,36 +22,39 @@
   <section ng-repeat="weather in mc.weatherResponse" class="flex-weather_nav-container">
   <!-- <div ng-repeat="weather in mc.weatherResponse"> -->
     <div>
+      <h5> {{weather.daily.data[0].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[0].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[0].temperatureLow}}</p></span>
     </div>
     <div>
+      <h5> {{weather.daily.data[1].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[1].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[1].temperatureLow}}</p></span>
     </div>
     <div>
+      <h5> {{weather.daily.data[2].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[2].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[2].temperatureLow}}</p></span>
     </div>
     <div>
+      <h5> {{weather.daily.data[3].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[3].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[3].temperatureLow}}</p></span>
     </div>
     <div>
+      <h5> {{weather.daily.data[4].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[4].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[4].temperatureLow}}</p></span>
     </div>
     <div>
+      <h5> {{weather.daily.data[5].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[5].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[5].temperatureLow}}</p></span>
     </div>
     <div>
+      <h5> {{weather.daily.data[6].time | date:'short'}} </h5>
       <span><h6> High </h6><p>{{weather.daily.data[6].temperatureMax}}</p></span>
       <span><h6> Low </h6><p>{{weather.daily.data[6].temperatureLow}}</p></span>
-    </div>
-    <div>
-      <span><h6> High </h6><p>{{weather.daily.data[7].temperatureMax}}</p></span>
-      <span><h6> Low </h6><p>{{weather.daily.data[7].temperatureLow}}</p></span>
     </div>
   </section>
 <!-- end of main container -->
