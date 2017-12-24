@@ -26,8 +26,9 @@
   13. PG
   14. Path
   15. Alertify.js
-  16. GIT / GitHub
-  17. Heroku
+  16. Load Awesome
+  17. GIT / GitHub
+  18. Heroku
 
 
 

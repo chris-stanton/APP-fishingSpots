@@ -189,8 +189,8 @@ body {
   /* background-color: #244bd7; */
   background-color: #18358e;
   color: #ffffff;
-  text-shadow: 1px 1px 1px #000000;
-  overflow: scroll;
+  text-shadow: 2px 2px 2px #000000;
+  
 }
 .flex-weather_nav-container div {
   display: flex;

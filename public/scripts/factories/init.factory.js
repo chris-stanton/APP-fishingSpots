@@ -5,7 +5,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 
 
 // setting screen notifiaction position
-  alertify.logPosition('bottom left');
+  alertify.logPosition('top right');
 
 // server side data response containers
   let weatherResponse = { list:[] };
@@ -29,7 +29,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
       method: 'GET',
       url: '/weather/getWeather',
       headers: {
-        
+
       }
     }).then(function(response) {
       weatherResponse.list = response.data;

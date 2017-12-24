@@ -5,6 +5,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 15vw;
 }
 .alertMessage img {
   height: 25px;
