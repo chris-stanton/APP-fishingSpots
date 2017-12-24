@@ -128,9 +128,9 @@ body {
   .flex-main-container .flex-main_nav-container {
     display: flex;
     flex-direction: row;
+    height: 8%;
     align-items: center;
     width: 100vw;
-    height: 8%;
     background-color: #244bd7;
     color: #ffffff;
   }
@@ -157,11 +157,33 @@ body {
   .flex-main-container .flex-main_map-container {
     display: flex;
     flex-direction: row;
+    height: 84%;
     width: 100vw;
-    height: 92%;
   }
     .test_map_div {
-      margin: 0;
-      width: 100%;
       height: 100%;
+      width: 100%;
+    }
+
+  .flex-main-container .flex-weather_nav-container {
+    display: flex;
+    flex-direction: row;
+    height: 8%;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: #244bd7;
+    color: #ffffff;
+  }
+    .flex-weather_nav-container div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0px 20px;
+    }
+    .flex-weather_nav-container span {
+      display: flex;
+      flex-direction: row;
+      margin: 0px 20px;
     }
