@@ -7,17 +7,13 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
 
   InitFactory.getWeather();
   self.weatherResponse = InitFactory.weatherResponse;
-  self.weatherResponse1 = InitFactory.weatherResponse1;
-  // var d = new Date(self.weatherResponse.list.daily.data[0].time);
-  // console.log(self.weatherResponse.list.daily.data[0].time);
-  // console.log(d);
-  console.log(self.weatherResponse1);
+  console.log('weatherResponse ', self.weatherResponse);
 
 
   // logout button click listener
   self.logout = () => {
     UserService.logout();
-  }
+  };
 
   // displays navionics map
   var webapi = new JNC.Views.BoatingNavionicsMap({

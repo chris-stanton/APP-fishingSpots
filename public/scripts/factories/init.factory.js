@@ -10,7 +10,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 // server side data response containers
   let weatherResponse = { list:[] };
 
-// fires on init on,y
+// fires on init only
   function init() {
     // logged in alert message
     setTimeout(function() {
@@ -24,18 +24,15 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
   init();
 
 // get weather from server/api on main controller init
-
-let weatherResponse1 = {}
   function getWeather() {
     $http({
       method: 'GET',
       url: '/weather/getWeather',
       headers: {
+        
       }
     }).then(function(response) {
       weatherResponse.list = response.data;
-      weatherResponse1 = response.data;
-      console.log(weatherResponse1);
     });
   };
 
@@ -49,7 +46,6 @@ let weatherResponse1 = {}
   return {
     getWeather : getWeather,
     weatherResponse : weatherResponse
-    // weatherResponse1 : weatherResponse1
   }
 
 }]); // end myAPP
