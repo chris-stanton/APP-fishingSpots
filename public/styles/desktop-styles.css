@@ -141,7 +141,8 @@ body {
   height: 8%;
   align-items: center;
   width: 100vw;
-  background-color: #244bd7;
+  /* background-color: #244bd7; */
+  background-color: #18358e;
   color: #ffffff;
 }
 .flex-main_nav-container span {
@@ -185,7 +186,8 @@ body {
   width: 100vw;
   align-items: center;
   justify-content: center;
-  background-color: #244bd7;
+  /* background-color: #244bd7; */
+  background-color: #18358e;
   color: #ffffff;
   text-shadow: 1px 1px 1px #000000;
   overflow: scroll;
