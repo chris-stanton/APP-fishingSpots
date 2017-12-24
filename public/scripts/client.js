@@ -5,7 +5,7 @@ var myApp = angular.module('myApp', ['ngRoute', 'ngAlertify', '720kb.tooltips'])
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
   // $locationProvider.hashPrefix('');
-
+  
 
   //routes
     $routeProvider

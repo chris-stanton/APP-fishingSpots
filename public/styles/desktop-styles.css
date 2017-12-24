@@ -190,7 +190,7 @@ body {
   background-color: #18358e;
   color: #ffffff;
   text-shadow: 2px 2px 2px #000000;
-  
+
 }
 .flex-weather_nav-container div {
   display: flex;
@@ -205,6 +205,7 @@ body {
 }
 .flex-weather_nav-container h4 {
   text-decoration: underline;
+  text-decoration-color: #8c8f8f;
 }
 .flex-weather_nav-container h6 {
   padding-right: 4px;

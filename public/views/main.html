@@ -42,41 +42,55 @@
       </span>
     </div>
 <!-- rest shows when location is present -->
-    <a href="#" tooltips tooltip-template-url="./views/templates/tooltips/weather.html"><div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[0].time * 1000 | date:'MM-dd-yy'}}</h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[0].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[0].temperatureLow}}</h5></span>
-    </div> </a>
-    <div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[1].time * 1000 | date:'MM-dd-yy'}} </h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[1].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[1].temperatureLow}}</h5></span>
-    </div>
-    <div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[2].time * 1000 | date:'MM-dd-yy'}} </h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[2].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[2].temperatureLow}}</h5></span>
-    </div>
-    <div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[3].time * 1000 | date:'MM-dd-yy'}} </h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[3].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[3].temperatureLow}}</h5></span>
-    </div>
-    <div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[4].time * 1000 | date:'MM-dd-yy'}} </h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[4].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[4].temperatureLow}}</h5></span>
-    </div>
-    <div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[5].time * 1000 | date:'MM-dd-yy'}} </h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[5].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[5].temperatureLow}}</h5></span>
-    </div>
-    <div ng-hide="weather.daily == null">
-      <h4> {{weather.daily.data[6].time * 1000 | date:'MM-dd-yy'}} </h4>
-      <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[6].temperatureMax}}</h5></span>
-      <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[6].temperatureLow}}</h5></span>
-    </div>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_0.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[0].time * 1000 | date:'MMM dd'}}</h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[0].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[0].temperatureMin}}</h5></span>
+      </div>
+    </a>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_1.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[1].time * 1000 | date:'MMM dd'}} </h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[1].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[1].temperatureMin}}</h5></span>
+      </div>
+    </a>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_2.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[2].time * 1000 | date:'MMM dd'}} </h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[2].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[2].temperatureMin}}</h5></span>
+      </div>
+    </a>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_3.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[3].time * 1000 | date:'MMM dd'}} </h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[3].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[3].temperatureMin}}</h5></span>
+      </div>
+    </a>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_4.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[4].time * 1000 | date:'MMM dd'}} </h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[4].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[4].temperatureMin}}</h5></span>
+      </div>
+    </a>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_5.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[5].time * 1000 | date:'MMM dd'}} </h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[5].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[5].temperatureMin}}</h5></span>
+      </div>
+    </a>
+    <a tooltips tooltip-template-url="./views/templates/tooltips/weather_6.html">
+      <div ng-hide="weather.daily == null">
+        <h4> {{weather.daily.data[6].time * 1000 | date:'MMM dd'}} </h4>
+        <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[6].temperatureMax}}</h5></span>
+        <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[6].temperatureMin}}</h5></span>
+      </div>
+    </a>
   </section>
 
 <!-- end of main container -->
