@@ -16,6 +16,7 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
     center: [  12.0, 46.0 ],
+    depth: 'feet',
     navKey: 'Need Key'
   });
   webapi.showSonarControl(false);

@@ -4,7 +4,7 @@
 
   <section class="flex-main_nav-container">
     <section class="flex-main_nav-select">
-      <span ng-click="mc.logout()" class="logout_span"><img ng-src="../assets/images/icons/logout.ico" class="logout-icon"> LOGOUT </span>
+      <span ng-click="mc.logout()" class="logout_span"><img ng-src="../assets/images/icons/logout.ico" class="logout-icon"><h5> LOGOUT </h5></span>
       <div class="leading_div">
         <label> Species </label>
           <select ng-model="mc.query.species">
@@ -36,7 +36,6 @@
     <section class="flex-main_nav-weather">
       <span><img ng-src="../../assets/images/icons/avitar.ico"> <h1>{{mc.userObject.userName}}</h1>
     </section>
-
   </section>
 
   <section class="flex-main_map-container" data-root="https://webapiv2.navionics.com/dist/webapi/images">
