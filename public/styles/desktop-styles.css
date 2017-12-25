@@ -159,13 +159,13 @@ body {
   align-items: center;
   margin-left: 20px;
 }
-.flex-main_nav-container span:hover {
+.flex-main_nav-select .logout_span:hover {
   cursor: pointer;
 }
-.flex-main_nav-container .leading_div {
+.flex-main_nav-select .leading_div {
   margin-left: 60px;
 }
-.flex-main_nav-container div {
+.flex-main_nav-select div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,13 +173,13 @@ body {
   margin-left: 20px;
   text-shadow: 1px 1px 1px #000000;
 }
-.flex-main_nav-container select {
+.flex-main_nav-select select {
   width: 130px;
 }
-.flex-main_nav-container select:hover {
+.flex-main_nav-select select:hover {
   cursor: pointer;
 }
-.flex-main_nav-container button {
+.flex-main_nav-select button {
   margin-left: 20px;
   height: 60%;
   width: 100px;
