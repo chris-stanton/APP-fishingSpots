@@ -192,12 +192,22 @@ body {
   text-shadow: 2px 2px 2px #000000;
   overflow: inherit;
 }
-.flex-weather_nav-container div {
+.flex-weather_nav-container a {
+  display: flex;
+  flex-direction: row;
+}
+.flex-weather_nav-container .forecast_data_container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 2em;
+  margin: 0px 0em 0em 2em;
+}
+.flex-weather_nav-container .forecast_icon_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .flex-weather_nav-container span {
   display: flex;
