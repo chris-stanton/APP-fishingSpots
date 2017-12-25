@@ -5,7 +5,7 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
 
   InitFactory.getWeather();
   self.weatherResponse = InitFactory.weatherResponse;
-  console.log('weatherResponse ', self.weatherResponse);
+  self.userObject = UserService.userObject;
 
   // logout button click listener
   self.logout = () => {
@@ -13,14 +13,29 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
   };
 
   // displays navionics map
-  var webapi = new JNC.Views.BoatingNavionicsMap({
+  let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
     center: [  12.0, 46.0 ],
     navKey: 'Need Key'
   });
   webapi.showSonarControl(false);
 
+  // query search button click listener
+  self.searchQuery = (query) => {
+    if(query === undefined) {
+      alertify.error('Please select a fish SPECIES and TIME OF YEAR');
+        console.log('missing species and TOY selections');
+    } else if(query.timeOfYear === undefined) {
+      alertify.error('Please select a TIME OF YEAR');
+        console.log('missing TOY selection');
+    } else if(query.species === undefined) {
+      alertify.error('Please select a fish SPECIES');
+        console.log('missing species selection');
+    } else {
+      // send object to DB for search HERE
+    }
 
+  };
 
 
 
