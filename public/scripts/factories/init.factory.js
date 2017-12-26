@@ -22,19 +22,21 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 
 // get weather from server/api on main controller init
   function getWeather() {
-    $http({
-      method: 'GET',
-      url: '/weather/getWeather',
-      headers: {
-
-      }
-    }).then(function(response) {
+    // $http({
+    //   method: 'GET',
+    //   url: '/weather/getWeather',
+    //   headers: {
+    //
+    //   }
+    // }).then(function(response) {
+    //   weatherResponse.list = response.data;
+    // });
+    $http.get('/weather/getWeather').then((response) => {
       weatherResponse.list = response.data;
-    });
+    }).catch((response) => {
+      console.log('Error getting weather')
+    })
   };
-
-
-
 
 
 
