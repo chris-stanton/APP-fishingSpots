@@ -37,7 +37,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
     getWeather : getWeather,
     weatherResponse : weatherResponse
   }
-// end myAPP
+
 }]);
 
 
