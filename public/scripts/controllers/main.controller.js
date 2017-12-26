@@ -16,8 +16,10 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
     center: [  12.0, 46.0 ],
-    depth: 'feet',
-    navKey: 'Need Key'
+    depthUnit: JNC.DEPTH_UNIT.FEET,
+    distanceUnit: JNC.DISTANCE_UNIT.MILES,
+    // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
+    navKey: 'Navionics_support_00001'
   });
   webapi.showSonarControl(false);
 
