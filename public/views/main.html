@@ -20,16 +20,8 @@
           </select>
       </div>
       <div>
-        <label> Time of Year </label>
-          <select ng-model="mc.query.timeOfYear">
-            <option value=""></option>
-            <option value="earlyIce"> Early Ice </option>
-            <option value="midIce"> Mid Ice </option>
-            <option value="lateIce"> Late Ice </option>
-            <option value="spring"> Spring </option>
-            <option value="midSummer"> Mid Summer </option>
-            <option value="fall"> Fall </option>
-          </select>
+        <label> Time of Year </label>  
+          <input type="date" ng-model="mc.query.timeOfYear">
       </div>
       <button type="button" ng-click="mc.searchQuery(mc.query)"> Get Info </button>
     </section>

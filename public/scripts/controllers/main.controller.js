@@ -35,6 +35,7 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
       alertify.error('Please select a fish SPECIES');
         console.log('missing species selection');
     } else {
+      console.log('query', query);
       // send object to DB for search HERE
     }
 
