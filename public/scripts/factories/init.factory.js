@@ -22,20 +22,11 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 
 // get weather from server/api on main controller init
   function getWeather() {
-    // $http({
-    //   method: 'GET',
-    //   url: '/weather/getWeather',
-    //   headers: {
-    //
-    //   }
-    // }).then(function(response) {
-    //   weatherResponse.list = response.data;
-    // });
     $http.get('/weather/getWeather').then((response) => {
       weatherResponse.list = response.data;
     }).catch((response) => {
       console.log('Error getting weather')
-    })
+    });
   };
 
 
@@ -48,3 +39,32 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
   }
 // end myAPP
 }]);
+
+
+
+
+
+
+
+
+
+
+// $http.delete('/addpitch/delete/' + id).then((response) => {
+//       console.log('delete success', response);
+//     }).catch(function (error) {
+//       console.log('Error message.')
+//     })
+
+
+// $http.put('/addpitch/update/', pitcher).then((response) => {
+//       console.log('Update success', response);
+//     }).catch(function (error) {
+//       console.log('Error message.')
+//     })
+
+
+// $http.post('/addpitch/' + userId, pitcher).then((response) => {
+//       console.log('post successs', response);
+//     }).catch((response) => {
+//       console.log('Error message.')
+//     })
