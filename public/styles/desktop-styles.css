@@ -286,3 +286,14 @@ body {
 .flex-weather_nav-container h6 {
   padding-right: 4px;
 }
+
+
+/* weather loader */
+.loader_weather {
+  display: flex;
+  flex-direction: row;
+}
+
+.loader_weather h3 {
+  margin: 0px 35px;
+}
