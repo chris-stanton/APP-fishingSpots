@@ -9,8 +9,6 @@ const passport = require('passport');
 const path = require('path');
 const pg = require('pg');
 const pool = require('../../modules/database-config');
-
-// module with bcrypt functions
 const encryptLib = require('../../modules/encryption.js');
 const connection = require('../../modules/connection.js');
 

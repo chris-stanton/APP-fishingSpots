@@ -40,16 +40,14 @@
   <section ng-repeat="weather in mc.weatherResponse" class="flex-weather_nav-container">
   <!-- shows when location is not present -->
     <div ng-show="weather.daily == null" class="loader_weather">
-      <!-- <span class="loader_weather"> -->
-        <h3> Searching For Current Location </h3>
-          <div class="la-ball-running-dots">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-      <!-- </span> -->
+      <h3> Searching For Current Location </h3>
+        <div class="la-ball-running-dots">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
     </div>
   <!-- rest shows when location is present -->
     <a tooltips tooltip-template-url="./views/templates/tooltips/weather_0.html">
