@@ -3,6 +3,7 @@
 <section class="flex-main-container">
 
   <section class="flex-main_nav-container">
+<!-- nav bar -->
     <section class="flex-main_nav-select">
       <span ng-click="mc.logout()" class="logout_span"><img ng-src="../assets/images/icons/logout.ico" class="logout-icon"><h5> LOGOUT </h5></span>
       <div class="leading_div">
@@ -20,7 +21,7 @@
           </select>
       </div>
       <div>
-        <label> Time of Year </label>  
+        <label> Time of Year </label>
           <input type="date" ng-model="mc.query.timeOfYear">
       </div>
       <button type="button" ng-click="mc.searchQuery(mc.query)"> Get Info </button>
@@ -30,12 +31,14 @@
     </section>
   </section>
 
+<!-- navionics map -->
   <section class="flex-main_map-container" data-root="https://webapiv2.navionics.com/dist/webapi/images">
     <div class="test_map_div" ></div>
   </section>
 
+<!-- weather bar -->
   <section ng-repeat="weather in mc.weatherResponse" class="flex-weather_nav-container">
-<!-- shows when location is not present -->
+    <!-- shows when location is not present -->
     <div ng-show="weather.daily == null">
       <span>
       <h3> Searching For Current Location </h3>
@@ -49,7 +52,7 @@
       </span>
     </div>
 
-<!-- rest shows when location is present -->
+    <!-- rest shows when location is present -->
     <a tooltips tooltip-template-url="./views/templates/tooltips/weather_0.html">
       <div ng-hide="weather.daily == null" class="forecast_data_container">
         <h4> {{weather.daily.data[0].time * 1000 | date:'EEE MMM dd'}}</h4>
