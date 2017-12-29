@@ -29,15 +29,15 @@ myApp.config(['$routeProvider', '$locationProvider', 'tooltipsConfProvider', fun
     .when ('/main', {
       templateUrl: './views/main.html',
       controller: 'MainController',
-      controllerAs: 'mc',
-      resolve: {
-            getuser : function(UserService){
-            return UserService.getuser();
-          }
-        }
+      controllerAs: 'mc'
+      // resolve: {
+      //       getuser : function(UserService){
+      //       return UserService.getuser();
+      //     }
+      //   }
     })
     .otherwise ( {
-        redirectTo: '/login'
+        redirectTo: '/main'
     });
 
 }]);
