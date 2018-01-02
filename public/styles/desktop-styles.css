@@ -204,6 +204,9 @@ body {
 .flex-main_nav-select select:hover {
   cursor: pointer;
 }
+.flex-main_nav-select input:hover {
+  cursor: pointer;
+}
 .flex-main_nav-select button {
   margin-left: 20px;
   height: 60%;
