@@ -1,5 +1,5 @@
 
-myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', function(InitFactory, UserService, alertify) {
+myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService', 'alertify', function(InitFactory, SpeciesFactory, UserService, alertify) {
 
   const self = this;
 
@@ -25,6 +25,7 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
 
   // query search button click listener
   self.searchQuery = (query) => {
+    console.log(query);
     if(query === undefined) {
       alertify.error('Please select a fish SPECIES and TIME OF YEAR');
         console.log('missing species and TOY selections');
@@ -35,10 +36,9 @@ myApp.controller('MainController',['InitFactory', 'UserService', 'alertify', fun
       alertify.error('Please select a fish SPECIES');
         console.log('missing species selection');
     } else {
-      console.log('query', query);
       // send object to DB for search HERE
-    }
-
+      SpeciesFactory.getSpeciesData(query);
+    };
   };
 
 

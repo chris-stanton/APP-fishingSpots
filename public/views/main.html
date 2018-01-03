@@ -10,7 +10,7 @@
       <div class="leading_div">
         <label> Species </label>
           <select ng-model="mc.query.species">
-            <option value="blugill"> Bluegill </option>
+            <option value="bluegill"> Bluegill </option>
             <option value="whiteCrappie"> White Crappie </option>
             <option value="blackCrappie"> Black Crappie </option>
             <option value="perch"> Perch </option>
@@ -23,20 +23,6 @@
       <div>
         <label> Time of Year </label>
           <input type="date" ng-model="mc.query.timeOfYear">
-          <!-- <select ng-model="mc.query.timeOfYear">
-            <option value="jan"> January </option>
-            <option value="feb"> Febuary </option>
-            <option value="mar"> March </option>
-            <option value="apr"> April </option>
-            <option value="may"> May </option>
-            <option value="jun"> June </option>
-            <option value="jly"> July </option>
-            <option value="aug"> August </option>
-            <option value="spt"> September </option>
-            <option value="oct"> October </option>
-            <option value="nov"> November </option>
-            <option value="dec"> December </option>
-          </select> -->
       </div>
       <button type="button" ng-click="mc.searchQuery(mc.query)"> Get Info </button>
     </section>
@@ -47,7 +33,7 @@
 
 <!-- navionics map -->
   <section class="flex-main_map-container" data-root="https://webapiv2.navionics.com/dist/webapi/images">
-    <div class="test_map_div" ></div>
+    <div class="test_map_div"></div>
   </section>
 
 <!-- weather bar -->
