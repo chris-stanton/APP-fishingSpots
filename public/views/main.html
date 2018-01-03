@@ -22,7 +22,20 @@
       </div>
       <div>
         <label> Time of Year </label>
-          <input type="date" ng-model="mc.query.timeOfYear">
+        <select ng-model="mc.query.timeOfYear">
+          <option value="jan"> January </option>
+          <option value="feb"> Febuary </option>
+          <option value="mar"> March </option>
+          <option value="apr"> April </option>
+          <option value="may"> May </option>
+          <option value="jun"> June </option>
+          <option value="jly"> July </option>
+          <option value="aug"> August </option>
+          <option value="spt"> September </option>
+          <option value="oct"> October </option>
+          <option value="nov"> November </option>
+          <option value="dec"> December </option>
+        </select>
       </div>
       <button type="button" ng-click="mc.searchQuery(mc.query)"> Get Info </button>
     </section>
