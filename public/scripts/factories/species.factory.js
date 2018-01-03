@@ -13,7 +13,6 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
   function getSpeciesData(query) {
 
     if(query.species === 'blueGill') {
-      console.log(query);
       $http({
         method:'GET',
         url: '/blueGill',
@@ -24,9 +23,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting blueGill HTTP request')
       });
-
     } else if(query.species === 'blackCrappie') {
-
       $http({
         method:'GET',
         url: '/blackCrappie',
@@ -37,9 +34,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting blackCrappie HTTP request')
       });
-
     } else if(query.species === 'whiteCrappie') {
-
       $http({
         method:'GET',
         url: '/whiteCrappie',
@@ -50,9 +45,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting whiteCrappie HTTP request')
       });
-
     } else if(query.species === 'perch') {
-
       $http({
         method:'GET',
         url: '/perch',
@@ -63,9 +56,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting perch HTTP request')
       });
-
     } else if(query.species === 'walleye') {
-
       $http({
         method:'GET',
         url: '/walleye',
@@ -76,9 +67,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting walleye HTTP request')
       });
-
     } else if(query.species === 'northernPike') {
-
       $http({
         method:'GET',
         url: '/northernPike',
@@ -89,9 +78,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting northernPike HTTP request')
       });
-
     } else if(query.species === 'musky') {
-
       $http({
         method:'GET',
         url: '/musky',
@@ -102,9 +89,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting musky HTTP request')
       });
-
     } else if(query.species === 'burbot') {
-
       $http({
         method:'GET',
         url: '/burbot',
@@ -115,7 +100,6 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting burbot HTTP request')
       });
-
     } else {
       console.log('error finding compatible HTTP request for ' + query.species + ' species');
     }; // end else/if
@@ -128,8 +112,9 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
 
   // public API
   return {
+    // functions
     getSpeciesData : getSpeciesData,
-
+    // objects
     blueGill : blueGill,
     blackCrappie : blackCrappie,
     whiteCrappie : whiteCrappie,

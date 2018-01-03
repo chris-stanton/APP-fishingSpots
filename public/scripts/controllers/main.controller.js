@@ -36,7 +36,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       alertify.error('Please select a fish SPECIES');
         console.log('missing species selection');
     } else {
-      // send object to DB for search HERE
+      // all fields have values and is good to go
       SpeciesFactory.getSpeciesData(query);
     };
   };
