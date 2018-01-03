@@ -25,7 +25,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
 
   // query search button click listener
   self.searchQuery = (query) => {
-    console.log(query);
+    // checking for user query null values
     if(query === undefined) {
       alertify.error('Please select a fish SPECIES and TIME OF YEAR');
         console.log('missing species and TOY selections');

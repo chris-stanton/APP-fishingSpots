@@ -7,14 +7,19 @@ const pg = require('pg');
 const pool = require('../../modules/database-config');
 
 
-
-
 router.get('/', function(req, res, next) {
-  let timeOfYear = req.headers.timeOfYear;
+  // pulling client side request data from headers
   let species = req.headers.species;
+  let timeOfYear = req.headers.timeofyear;
+  // splitting month an time zone from time string
+  let timeOfYear_array = timeOfYear.split(' ');
+  // 3 digit month: Jan
+  let month = timeOfYear_array[1];
+  // 3 digit time zone: (CST)
+  let timeZone = timeOfYear_array[6];
+  console.log('month ', timeZone);
 
-  console.log('blueGill route hit', req.headers);
-  
+
 });
 
 

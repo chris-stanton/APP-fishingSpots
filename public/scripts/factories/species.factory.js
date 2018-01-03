@@ -13,7 +13,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
   function getSpeciesData(query) {
 
     if(query.species === 'blueGill') {
-
+      console.log(query);
       $http({
         method:'GET',
         url: '/blueGill',
@@ -37,7 +37,7 @@ myApp.factory('SpeciesFactory',['$http', '$location', 'alertify', function($http
       }).catch((response) => {
         console.log('Error getting blackCrappie HTTP request')
       });
-      
+
     } else if(query.species === 'whiteCrappie') {
 
       $http({
