@@ -13,8 +13,4 @@ router.get('/getWeather', function (req, res) {
 
 
 
-
-
-
-
 module.exports = router;
