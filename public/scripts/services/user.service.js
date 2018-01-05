@@ -46,5 +46,6 @@ myApp.factory('UserService',['$http', '$location', 'alertify', function($http, $
     }
 
   }; // end return
+  
 // end myApp
 }]);

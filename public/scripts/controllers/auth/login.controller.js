@@ -30,7 +30,6 @@ myApp.controller('LoginController',['$http', '$location', '$route', 'UserService
         $http.post('/', self.user).then(function(response) {
           if(response.data.username) {
             console.log('Login success: ', response.data);
-            // redirect if login is successfull
             $location.path('/main');
           } else {
             console.log('Login failure response: ', response);

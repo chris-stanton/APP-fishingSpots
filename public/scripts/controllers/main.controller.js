@@ -73,5 +73,3 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
 
 
 }]); // end controller code block
-
-// {enableHighAccuracy: true}

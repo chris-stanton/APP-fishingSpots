@@ -46,32 +46,3 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
   }
 
 }]);
-
-
-
-
-
-
-
-
-
-
-// $http.delete('/addpitch/delete/' + id).then((response) => {
-//       console.log('delete success', response);
-//     }).catch(function (error) {
-//       console.log('Error message.')
-//     })
-
-
-// $http.put('/addpitch/update/', pitcher).then((response) => {
-//       console.log('Update success', response);
-//     }).catch(function (error) {
-//       console.log('Error message.')
-//     })
-
-
-// $http.post('/addpitch/' + userId, pitcher).then((response) => {
-//       console.log('post successs', response);
-//     }).catch((response) => {
-//       console.log('Error message.')
-//     })
