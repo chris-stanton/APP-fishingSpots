@@ -21,8 +21,13 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
   init();
 
 // get weather from server/api on main controller init
-  function getWeather() {
-    $http.get('/weather/getWeather').then((response) => {
+  function getWeather(coords) {
+    $http({
+      method:'GET',
+      url: '/weather/getWeather',
+      // must send an object
+      headers: coords
+    }).then((response) => {
       weatherResponse.list = response.data;
     }).catch((response) => {
       console.log('Error getting weather')

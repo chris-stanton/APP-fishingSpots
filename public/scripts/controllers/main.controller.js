@@ -6,22 +6,33 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   let long = 0;
   let lat = 0;
 
-  // gets info from server side API call to Dark Sky weather
-  InitFactory.getWeather();
   // return info from server side API call to Dark Sky weather
   self.weatherResponse = InitFactory.weatherResponse;
   // users credentials from passprod service
   self.userObject = UserService.userObject;
 
-  // gets users geolocation coords and saves to var holders above
-  navigator.geolocation.getCurrentPosition(function(position) {
-    console.log('Local position API response: ', position);
-    // geolocation response setting to variable
-    lat = position.coords.latitude;
-    long = position.coords.longitude;
-  });
+  // checking for geolocation
+  if (navigator.geolocation) {
+    // gets users geolocation coords and saves to var holders above
+    navigator.geolocation.getCurrentPosition(function(position) {
+      console.log('Local position API response: ', position);
+      // geolocation response setting to variable
+      lat = position.coords.latitude;
+      long = position.coords.longitude;
+      // creating object to send sever side
+      let coords = {
+        lat: lat,
+        long: long
+      }
+      // gets info from server side API call to Dark Sky weather
+      InitFactory.getWeather(coords);
+    });
+  } else {
+    alertify.error('Finding Geolocation failed. Error winding loaction or divice might noe support geolocation.  Try again!');
+      console.log('geolocation was not supported');
+  };
 
-  // displays navionics map
+  // displays and settings for navionics map
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
     center: [  lat, long ],
