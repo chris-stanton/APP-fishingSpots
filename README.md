@@ -13,10 +13,10 @@
 
 ## Technologies Used:
 #### Software
-  1. Express.js
-  2. Express-session
   3. Angular.js
   4. Angular Route
+  1. Express.js
+  2. Express-session
   5. Node.js
   8. Body-Parser
   9. Bcrypt
