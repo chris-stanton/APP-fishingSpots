@@ -1,21 +1,30 @@
 
 myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService', 'alertify', function(InitFactory, SpeciesFactory, UserService, alertify) {
 
+  // setting variables and variable containers
   const self = this;
+  let long = 0;
+  let lat = 0;
 
+  // gets info from server side API call to Dark Sky weather
   InitFactory.getWeather();
+  // return info from server side API call to Dark Sky weather
   self.weatherResponse = InitFactory.weatherResponse;
+  // users credentials from passprod service
   self.userObject = UserService.userObject;
 
-  // logout button click listener
-  self.logout = () => {
-    UserService.logout();
-  };
+  // gets users geolocation coords and saves to var holders above
+  navigator.geolocation.getCurrentPosition(function(position) {
+    console.log('Local position API response: ', position);
+    // geolocation response setting to variable
+    lat = position.coords.latitude;
+    long = position.coords.longitude;
+  });
 
   // displays navionics map
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
-    center: [  12.0, 46.0 ],
+    center: [  lat, long ],
     depthUnit: JNC.DEPTH_UNIT.FEET,
     distanceUnit: JNC.DISTANCE_UNIT.MILES,
     // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
@@ -39,6 +48,11 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       // all fields have values and is good to go
       SpeciesFactory.getSpeciesData(query);
     };
+  };
+
+  // logout button click listener
+  self.logout = () => {
+    UserService.logout();
   };
 
 
