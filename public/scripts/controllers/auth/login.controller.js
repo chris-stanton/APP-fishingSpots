@@ -8,7 +8,7 @@ myApp.controller('LoginController',['$http', '$location', '$route', 'UserService
       password: ''
     };
 // setting alert notification screen position
-    alertify.logPosition('top right');
+    alertify.logPosition('bottom left');
 // setting message to empty string on init
     self.message = '';
 

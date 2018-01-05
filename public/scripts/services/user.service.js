@@ -1,5 +1,5 @@
 
-myApp.factory('UserService', function($http, $location, alertify){
+myApp.factory('UserService',['$http', '$location', 'alertify', function($http, $location, alertify){
 
   const userObject = {};
 
@@ -47,4 +47,4 @@ myApp.factory('UserService', function($http, $location, alertify){
 
   }; // end return
 // end myApp
-});
+}]);

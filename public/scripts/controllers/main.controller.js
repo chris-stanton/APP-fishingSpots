@@ -21,11 +21,15 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       long = position.coords.longitude;
       // creating object to send sever side
       let coords = {
-        lat: lat,
-        long: long
+        lat,
+        long
       }
       // gets info from server side API call to Dark Sky weather
       InitFactory.getWeather(coords);
+      alertify.log('<div class="alertMessage">' +
+                    '<img src="../../assets/images/icons/favicon.ico"> ' +
+                    'Geolocation accuracy is: ' + position.coords.accuracy + 'm.' +
+                    '</div>');
     });
   } else {
     alertify.error('Finding Geolocation failed. Error winding loaction or divice might noe support geolocation.  Try again!');
@@ -69,3 +73,5 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
 
 
 }]); // end controller code block
+
+// {enableHighAccuracy: true}

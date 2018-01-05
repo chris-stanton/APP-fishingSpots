@@ -2,7 +2,7 @@
 myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', function($http, $location, alertify, UserService) {
 
 // setting screen notifiaction position
-  alertify.logPosition('top right');
+  alertify.logPosition('bottom left');
 
 // server side data response containers
   let weatherResponse = { list:[] };
@@ -39,8 +39,10 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
 
   // public API
   return {
-    getWeather : getWeather,
-    weatherResponse : weatherResponse
+    // calls server for API weather data
+    getWeather,
+    // return of sserverside weather data fro api
+    weatherResponse
   }
 
 }]);
