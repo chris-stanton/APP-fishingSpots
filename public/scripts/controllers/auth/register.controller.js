@@ -21,7 +21,6 @@ myApp.controller('RegisterController', ['$location', '$http', 'alertify', functi
       console.log('sending user credentials to server...', self.user);
       $http.post('/register', self.user).then(function(response) {
         console.log('registering user success');
-        // alertify.success("User registration completed");
         alertify.success('<div class="alertMessage">' +
                           '<img src="../../assets/images/icons/addUser.ico"> User registration completed' +
                         '</div>')
