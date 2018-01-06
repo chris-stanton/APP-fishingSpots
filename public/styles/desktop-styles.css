@@ -93,7 +93,7 @@ body {
     width: 100%;
   }
     .login-input-container img {
-      width: 20vw;
+      width: 15vw;
       margin: 0px 0px 50px 0px;
     }
     .login-input-container h1 {
@@ -122,6 +122,9 @@ body {
       color: #ffffff;
       outline: none;
       cursor: pointer;
+    }
+    .login-input-container button:hover {
+      background-color: #18358e;
     }
     .login-input-container a {
       font-size: 0.9em;
