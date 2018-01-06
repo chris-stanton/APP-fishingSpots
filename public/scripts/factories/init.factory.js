@@ -13,7 +13,7 @@ myApp.factory('InitFactory',['$http', '$location', 'alertify', 'UserService', fu
     setTimeout(function() {
       let loggedInUser = UserService.userObject.userName;
       alertify.log('<div class="alertMessage">' +
-                     '<img src="../../assets/images/icons/favicon.ico"> Welcome ' +
+                     '<img src="../../assets/images/icons/login.ico"> Welcome ' +
                        loggedInUser +
                    '</div>');
     }, 200);

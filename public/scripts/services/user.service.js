@@ -36,7 +36,7 @@ myApp.factory('UserService',['$http', '$location', 'alertify', function($http, $
         // alertify logged out message
         setTimeout(function() {
           alertify.log('<div class="alertMessage">' +
-                        '<img src="../../assets/images/icons/favicon.ico">' +
+                        '<img src="../../assets/images/icons/logout.ico">' +
                           userObject.userName  +
                         ' logged out</div>');
         }, 200);
@@ -46,6 +46,6 @@ myApp.factory('UserService',['$http', '$location', 'alertify', function($http, $
     }
 
   }; // end return
-  
+
 // end myApp
 }]);

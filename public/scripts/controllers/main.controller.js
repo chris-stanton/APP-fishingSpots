@@ -28,7 +28,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       InitFactory.getWeather(coords);
       alertify.log('<div class="alertMessage">' +
                     '<img src="../../assets/images/icons/accuracy.ico"> ' +
-                    'Geolocation accuracy is: ' + position.coords.accuracy + 'm.' +
+                    'Geolocation Accuracy: ' + position.coords.accuracy + 'm.' +
                     '</div>');
     });
   } else {
