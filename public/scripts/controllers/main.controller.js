@@ -27,7 +27,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       // gets info from server side API call to Dark Sky weather
       InitFactory.getWeather(coords);
       alertify.log('<div class="alertMessage">' +
-                    '<img src="../../assets/images/icons/favicon.ico"> ' +
+                    '<img src="../../assets/images/icons/accuracy.ico"> ' +
                     'Geolocation accuracy is: ' + position.coords.accuracy + 'm.' +
                     '</div>');
     });
