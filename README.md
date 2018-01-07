@@ -14,21 +14,21 @@
 ## Technologies Used:
 #### Software
   1. Angular.js
-  4. Angular Route
-  1. Express.js
-  2. Express-session
+  2. Angular Route
+  3. Express.js
+  4. Express-session
   5. Node.js
-  8. Body-Parser
-  9. Bcrypt
-  10. Dotenv
-  11. PassportJS
-  12. Passport-local
-  13. PG
-  14. Path
-  15. Alertify.js
-  16. Load Awesome
-  17. GIT / GitHub
-  18. Heroku
+  6. Body-Parser
+  7. Bcrypt
+  8. Dotenv
+  9. PassportJS
+  10. Passport-local
+  11. PG
+  12. Path
+  13. Alertify.js
+  14. Load Awesome
+  15. GIT / GitHub
+  16. Heroku
 
 
 
