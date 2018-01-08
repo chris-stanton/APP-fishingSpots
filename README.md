@@ -13,7 +13,7 @@
 
 ## Technologies Used:
 #### Software
-  1. Angular.js
+  1. Angular
   2. Angular Route
   3. Express.js
   4. Express-session
