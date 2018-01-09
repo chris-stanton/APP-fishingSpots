@@ -1,6 +1,6 @@
 
 -- STEP 1:
-	-- create database titled (hardwareUI)
+	-- create database titled (fishingSpots)
 
 -- STEP 2
 	-- create users table for authentication
