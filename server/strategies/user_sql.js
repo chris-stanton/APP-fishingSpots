@@ -75,7 +75,7 @@ passport.deserializeUser(function(id, done) {
       done(err);
     };
 
-    var user = {};
+    let user = {};
 
     client.query("SELECT * FROM users WHERE id = $1", [id], function(err, result) {
 
@@ -111,7 +111,7 @@ passport.use('local', new localStrategy({
         // assumes the username will be unique, thus returning 1 or 0 results
         client.query("SELECT * FROM users WHERE username = $1", [username],
           function(err, result) {
-            var user = {};
+            let user = {};
 
             console.log('here');
 
