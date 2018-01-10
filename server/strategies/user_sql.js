@@ -6,47 +6,13 @@
 const passport = require('passport');
 const localStrategy = require('passport-local').Strategy;
 const encryptLib = require('../modules/encryption');
-const connection = require('../modules/database-config.js');
+// const connection = require('../modules/database-config.js');
 const pg = require('pg');
 const url = require('url');
+const pool = require('../modules/database-config');
 
 // setting config empty
-var config = {};
-
-// connection to DB for heroku
-if (process.env.DATABASE_URL) {
-  // Heroku gives a url, not a connection object
-  const params = url.parse(process.env.DATABASE_URL);
-  const auth = params.auth.split(':');
-  // for uses with *heroku
-  config = {
-    user: auth[0],
-    password: auth[1],
-    host: params.hostname,
-    port: params.port,
-    database: params.pathname.split('/')[1],
-    ssl: true, // heroku requires ssl to be true
-    max: 10, // max number of clients in the pool
-    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-  };
-} else {
-  // for use locally
-  config = {
-    user: process.env.PG_USER || 'chrisstanton', //env var: PGUSER
-    password: process.env.DATABASE_SECRET || null, //env var: PGPASSWORD
-    host: process.env.DATABASE_SERVER || 'localhost', // Server hosting the postgres database
-    port: process.env.DATABASE_PORT || 5432, //env var: PGPORT
-    database: process.env.DATABASE_NAME || 'fishingSpots', //env var: PGDATABASE
-    max: 10, // max number of clients in the pool
-    idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
-  };
-}
-
-
-//this initializes a connection pool
-//it will keep idle connections open for a 30 seconds
-//and set a limit of maximum 10 idle clients
-let pool = new pg.Pool(config);
+let config = {};
 
 let acquireCount = 0
 pool.on('acquire', function (client) {
