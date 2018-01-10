@@ -4,15 +4,16 @@
 // Note: SETUP FOR DEPLOY WITH HEROKU //
 ////////////////////////////////////////
 
-var pg = require('pg');
-var url = require('url');
-var config = {};
+const pg = require('pg');
+const url = require('url');
+
+let config = {};
 
 if (process.env.DATABASE_URL) {
 
   // Heroku gives a url, not a connection object
-  var params = url.parse(process.env.DATABASE_URL);
-  var auth = params.auth.split(':');
+  let params = url.parse(process.env.DATABASE_URL);
+  let auth = params.auth.split(':');
   // for uses with *heroku
   config = {
     user: auth[0],
