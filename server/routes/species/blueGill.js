@@ -26,21 +26,38 @@ router.get('/', function(req, res, next) {
 
   // get queries based off users current time zone
   if(timeZone === '(EST)') {
+    // Eastern Standard Time
     console.log('users is in EST timezone');
-    // GET DB query
   } else if(timeZone === '(EDT)') {
+    // Eastern Daylight Time
     console.log('users is in EDT timezone');
-    // GET DB query
   } else if(timeZone === '(CST)') {
+    // Centeral Standard Time
     console.log('users is in CST timezone');
-    // GET DB query
   } else if(timeZone === '(CDT)') {
-    console.log('users is in DST timezone');
-    // GET DB query
+    // Central Daylight Time
+    console.log('users is in CDT timezone');
+  } else if(timeZone === '(AST)') {
+    // Atlantic Standard time
+    console.log('users is in AST timezone');
+  } else if(timeZone === '(MST)') {
+    // Mountain Standard Time
+    console.log('users is in MST timezone');
+  } else if(timeZone === '(MDT)') {
+    // Mountain Daylight Time
+    console.log('users is in MDT timezone');
+  } else if(timeZone === '(PST)') {
+    // Pacific Stadard Time
+    console.log('users is in PST timezone');
+  } else if(timeZone === '(PDT)') {
+    // Pacific Daylight Time
+    console.log('users is in PDT timezone');
   } else {
+    // Could not find users timezone
     console.log('could not find users timezone match');
     res.sendStatus(500);
   }
+
 
 
 
