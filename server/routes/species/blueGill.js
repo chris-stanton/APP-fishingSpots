@@ -24,7 +24,7 @@ router.get('/', function(req, res, next) {
     timeZone
   }
 
-  // get queries based off users current time zone
+  // doing something with users timezone
   if(timeZone === '(EST)') {
     // Eastern Standard Time
     console.log('users is in EST timezone');
