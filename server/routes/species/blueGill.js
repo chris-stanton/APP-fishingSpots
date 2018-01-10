@@ -54,7 +54,7 @@ router.get('/', function(req, res, next) {
     console.log('users is in PDT timezone');
   } else {
     // Could not find users timezone
-    console.log('could not find users timezone match');
+    console.log('could not find users timezone match, user need to be on earth!');
     res.sendStatus(500);
   }
 
