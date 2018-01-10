@@ -8,7 +8,7 @@ const pool = require('../../modules/database-config');
 
 
 router.get('/', function(req, res, next) {
-  // pulling client side request data from headers
+  // pulling client side request data from headers request
   let species = req.headers.species;
   let timeOfYear = req.headers.timeofyear;
 
