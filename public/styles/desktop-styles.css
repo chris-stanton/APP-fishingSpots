@@ -270,7 +270,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0px 0em 0em 2em;
+  margin: 0em 0em 0em 2em;
 }
 .flex-weather_nav-container .forecast_icon_container {
   display: flex;
