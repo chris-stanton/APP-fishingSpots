@@ -18,6 +18,32 @@ router.get('/', function(req, res, next) {
   let month = timeOfYear_array[1];
   // 3 digit time zone: (CST)
   let timeZone = timeOfYear_array[6];
+  // creating current tim object
+  let currentTime = {
+    month,
+    timeZone
+  }
+
+  // get queries based off users current time zone
+  if(timeZone === '(EST)') {
+    console.log('users is in EST timezone');
+    // GET DB query
+  } else if(timeZone === '(EDT)') {
+    console.log('users is in EDT timezone');
+    // GET DB query
+  } else if(timeZone === '(CST)') {
+    console.log('users is in CST timezone');
+    // GET DB query
+  } else if(timeZone === '(CDT)') {
+    console.log('users is in DST timezone');
+    // GET DB query
+  } else {
+    console.log('could not find users timezone match');
+    res.sendStatus(500);
+  }
+
+
+
 
 
 

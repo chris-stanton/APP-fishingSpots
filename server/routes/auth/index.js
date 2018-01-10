@@ -12,8 +12,8 @@ const pg = require('pg');
 // Handles login form POST from index.html
 router.post('/',
     passport.authenticate('local', {
-        successRedirect: '/user',
-        failureRedirect: '/'
+      successRedirect: '/user',
+      failureRedirect: '/'
     })
 );
 

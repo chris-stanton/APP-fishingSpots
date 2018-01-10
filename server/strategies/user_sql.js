@@ -115,15 +115,16 @@ passport.use('local', new localStrategy({
 
             console.log('here');
 
-            // Handle Errors
+            // Handle Errors from query search
             if (err) {
-              console.log('connection err ', err);
+              console.log('error getting results from SQL query ', err);
               done(null, user);
             }
 
             release();
             console.log(connectCount);
 
+            // handles results from query search
             if(result.rows[0] != undefined) {
               user = result.rows[0];
               console.log('User obj', user);
