@@ -111,10 +111,8 @@ passport.use('local', new localStrategy({
         // assumes the username will be unique, thus returning 1 or 0 results
         client.query("SELECT * FROM users WHERE username = $1", [username],
           function(err, result) {
+            // setting user to empty object
             let user = {};
-
-            console.log('here');
-
             // Handle Errors from query search
             if (err) {
               console.log('error getting results from SQL query ', err);
@@ -122,24 +120,24 @@ passport.use('local', new localStrategy({
             }
 
             release();
-            console.log(connectCount);
+            console.log('connectCount: ', connectCount);
 
             // handles results from query search
             if(result.rows[0] != undefined) {
               user = result.rows[0];
-              console.log('User obj', user);
+              console.log('User obj: ', user);
               // Hash and compare
               if(encryptLib.comparePassword(password, user.password)) {
-                // if all good
-                console.log('passwords match');
+                // if match
+                console.log('password match');
                 done(null, user);
               } else {
-                // if falure / error
-                console.log('password does not match');
+                // if no match / error
+                console.log('password does not match/error');
                 done(null, false, {message: 'Incorrect credentials.'});
               }
             } else {
-              console.log('no user');
+              console.log('user does not exist');
               done(null, false);
             }
           });
