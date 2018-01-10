@@ -5,12 +5,13 @@
 //////////////////////////
 
 // Defining dependancies
-var bcrypt = require('bcrypt');
-var SALT_WORK_FACTOR = 10;
+const bcrypt = require('bcrypt');
 
-var publicAPI = {
+let SALT_WORK_FACTOR = 10;
+
+let publicAPI = {
   encryptPassword: function(password) {
-      var salt = bcrypt.genSaltSync(SALT_WORK_FACTOR);
+      let salt = bcrypt.genSaltSync(SALT_WORK_FACTOR);
       return bcrypt.hashSync(password, salt);
   },
   comparePassword: function(candidatePassword, storedPassword) {
