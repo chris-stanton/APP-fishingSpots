@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
   let month = timeOfYear_array[1];
   // 3 digit time zone: (CST)
   let timeZone = timeOfYear_array[6];
-  // creating current tim object
+  // creating users current time object
   let currentTime = {
     month,
     timeZone
