@@ -64,5 +64,5 @@ app.use('/*', index);
 // port listening on
 app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), () => {
-    console.log('Listening on localhost port: ', app.get('port'));
+    console.log('Listening on localhost:', app.get('port'));
 });
