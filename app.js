@@ -1,5 +1,5 @@
 
-// defining node/module dependancies
+// defining node module dependancies
 const express = require('express');
 const app = express();
 const path = require('path');
