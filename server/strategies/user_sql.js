@@ -3,6 +3,7 @@
 // Passport file //
 ///////////////////
 
+// defining node module dependancies
 const passport = require('passport');
 const localStrategy = require('passport-local').Strategy;
 const encryptLib = require('../modules/encryption');
