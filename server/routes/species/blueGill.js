@@ -16,6 +16,7 @@ router.get('/', function(req, res, next) {
   let timeOfYear_array = timeOfYear.split(' ');
   // 3 digit month: Jan
   let month = timeOfYear_array[1];
+  console.log('month ', month);
   // 3 digit time zone: (CST)
   let timeZone = timeOfYear_array[6];
   // creating users current time object
@@ -28,6 +29,46 @@ router.get('/', function(req, res, next) {
   if(timeZone === '(EST)') {
     // Eastern Standard Time
     console.log('users is in EST timezone');
+    if (month === 'Jan') {
+      // if january
+      console.log('User selected Jan month');
+    } else if(month === 'Feb') {
+      // if February
+      console.log('User selected Feb month');
+    } else if(month === 'Mar') {
+      // if March
+      console.log('User selected Mar month');
+    } else if(month === 'Apr') {
+      // if April
+      console.log('User selected Apr month');
+    } else if(month === 'May') {
+      // if May
+      console.log('User selected May month');
+    } else if(month === 'Jun') {
+      // if June
+      console.log('User selected Jun month');
+    } else if(month === 'Jul') {
+      // if July
+      console.log('User selected Jul month');
+    } else if(month === 'Aug') {
+      // if August
+      console.log('User selected Aug month');
+    } else if(month === 'Sep') {
+      // if September
+      console.log('User selected Sep month');
+    } else if(month === 'Oct') {
+      // if October
+      console.log('User selected Oct month');
+    } else if(month === 'Nov') {
+      // if November
+      console.log('User selected Nov month');
+    } else if(month === 'Dec') {
+      // if December
+      console.log('User selected Dec month');
+    } else {
+      console.log('could not find users month match');
+      res.sendStatus(500);
+    }
   } else if(timeZone === '(EDT)') {
     // Eastern Daylight Time
     console.log('users is in EDT timezone');
