@@ -57,8 +57,8 @@ passport.deserializeUser(function(id, done) {
       release();
 
       if(!user) {
-          // user not found
-          return done(null, false, {message: 'Incorrect credentials.'});
+        // user not found
+        return done(null, false, {message: 'Incorrect credentials.'});
       } else {
         // user found
         done(null, user);
@@ -73,7 +73,7 @@ passport.use('local', new localStrategy({
     usernameField: 'username'
     }, function(req, username, password, done) {
 	    pool.connect(function (err, client, release) {
-	   
+
         // assumes the username will be unique, thus returning 1 or 0 results
         client.query("SELECT * FROM users WHERE username = $1", [username],
           function(err, result) {
