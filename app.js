@@ -27,7 +27,6 @@ const musky = require('./server/routes/species/musky.js');
 const burbot = require('./server/routes/species/burbot.js');
 
 
-
 // serve back static files
 app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json());
@@ -38,10 +37,10 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-// passport session configuration
+// passportJS session configuration (external JS file)
 app.use(sessionConfig);
 
-// starts up passport session
+// starts up passportJS session
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -59,11 +58,11 @@ app.use('/walleye', walleye);
 app.use('/northernPike', northernPike);
 app.use('/musky', musky);
 app.use('/burbot', burbot);
-// catch/else route
+// catch/else route (needed for passportJS)
 app.use('/*', index);
 
 // port listening on
 app.set('port', process.env.PORT || 5000);
 app.listen(app.get('port'), () => {
-    console.log('Listening on port: ', app.get('port'));
+    console.log('Listening on localhost port: ', app.get('port'));
 });
