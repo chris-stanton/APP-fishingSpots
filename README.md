@@ -23,7 +23,6 @@
   8. Dotenv
   9. PassportJS
   10. Passport-local
-  11. PG
   12. Path
   13. Alertify.js
   14. Load Awesome
