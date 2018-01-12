@@ -25,8 +25,8 @@
   10. Passport-local
   13. Alertify.js
   14. Load Awesome
-  15. GIT / GitHub
-  16. Heroku
+  15. GIT / GitHub - version control
+  16. Heroku - version control and hosting
 
 
 
