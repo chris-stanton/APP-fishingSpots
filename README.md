@@ -23,6 +23,7 @@
   8. Dotenv
   9. PassportJS
   10. Passport-local
+  11. PG
   13. Alertify.js
   14. Load Awesome
   15. GIT / GitHub - version control
