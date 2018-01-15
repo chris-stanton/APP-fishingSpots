@@ -3,8 +3,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
 
   // setting variables and variable containers
   const self = this;
-  let long = 0;
-  let lat = 0;
+  let coords = {};
 
   // return info from server side API call to Dark Sky weather
   self.weatherResponse = InitFactory.weatherResponse;
@@ -20,8 +19,6 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       lat = position.coords.latitude;
       long = position.coords.longitude;
 
-      console.log('lat: ', lat);
-      console.log('long: ', long);
       // creating object to send sever side
       let coords = {
         lat,
@@ -43,7 +40,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   // displays and settings for navionics map
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
-    center: [  44.7, -93.2 ],
+    center: [  coords.lat, coords.long ],
     depthUnit: JNC.DEPTH_UNIT.FEET,
     distanceUnit: JNC.DISTANCE_UNIT.MILES,
     // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
