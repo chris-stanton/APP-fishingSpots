@@ -39,7 +39,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   // displays and settings for navionics map
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
-    center: [  lat, long ],
+    // center: [  lat, long ],
     depthUnit: JNC.DEPTH_UNIT.FEET,
     distanceUnit: JNC.DISTANCE_UNIT.MILES,
     // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
