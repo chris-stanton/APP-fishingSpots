@@ -37,15 +37,15 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   };
 
   // displays and settings for navionics map
-  let webapi = new JNC.Views.BoatingNavionicsMap({
-    tagId: '.test_map_div',
-    center: [  lat, long ],
-    depthUnit: JNC.DEPTH_UNIT.FEET,
-    distanceUnit: JNC.DISTANCE_UNIT.MILES,
-    // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
-    navKey: 'Navionics_webapi_03299'
-  });
-  webapi.showSonarControl(false);
+  // let webapi = new JNC.Views.BoatingNavionicsMap({
+  //   tagId: '.test_map_div',
+  //   center: [  lat, long ],
+  //   depthUnit: JNC.DEPTH_UNIT.FEET,
+  //   distanceUnit: JNC.DISTANCE_UNIT.MILES,
+  //   // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
+  //   navKey: 'Navionics_webapi_03299'
+  // });
+  // webapi.showSonarControl(false);
 
   // query search button click listener
   self.searchQuery = (query) => {
