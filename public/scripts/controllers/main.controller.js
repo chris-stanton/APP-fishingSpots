@@ -51,7 +51,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
     // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
     navKey: 'Navionics_webapi_03299'
   });
-  webapi.showSonarControl(false);
+  webapi.showSonarControl(true);
 
   // query search button click listener
   self.searchQuery = (query) => {
