@@ -39,7 +39,7 @@
 <!-- weather bar -->
   <section ng-repeat="weather in mc.weatherResponse" class="flex-weather_nav-container">
   <!-- shows when location is not present -->
-    <!-- <div ng-show="weather.daily == null" class="loader_weather">
+    <div ng-show="weather.daily == undefined" class="loader_weather">
       <h3> Searching For Current Location </h3>
         <div class="la-ball-running-dots">
           <div></div>
@@ -48,10 +48,10 @@
           <div></div>
           <div></div>
         </div>
-    </div> -->
+    </div>
   <!-- rest shows when location is present -->
     <a tooltips tooltip-template-url="./views/templates/tooltips/weather_0.html">
-      <div ng-hide="weather.daily == null" class="forecast_data_container">
+      <div ng-hide="weather.daily == undefined" class="forecast_data_container">
         <h4> {{weather.daily.data[0].time * 1000 | date:'EEE MMM dd'}}</h4>
         <span><h6 class="temp_high"> High &#8457;</h6><h5>{{weather.daily.data[0].temperatureMax}}</h5></span>
         <span><h6 class="temp_low"> Low &#8457;</h6><h5>{{weather.daily.data[0].temperatureMin}}</h5></span>
