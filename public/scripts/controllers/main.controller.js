@@ -3,8 +3,8 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
 
   // setting variables and variable containers
   const self = this;
-  let lat = 0;
-  let long = 0;
+  // let lat = 0;
+  // let long = 0;
 
   // return info from server side API call to Dark Sky weather
   self.weatherResponse = InitFactory.weatherResponse;
@@ -34,24 +34,23 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
                     '</div>');
     });
 
+    // displays and settings for navionics map
+    let webapi = new JNC.Views.BoatingNavionicsMap({
+      tagId: '.test_map_div',
+      center: [  lat, long ],
+      depthUnit: JNC.DEPTH_UNIT.FEET,
+      distanceUnit: JNC.DISTANCE_UNIT.MILES,
+      // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
+      navKey: 'Navionics_webapi_03299'
+    });
+    webapi.showSonarControl(true);
+
+
   } else {
     alertify.error('Finding Geolocation failed. Error winding loaction or divice might noe support geolocation.  Try again!');
       console.log('geolocation was not supported');
   };
 
-  console.log('lat: ', lat);
-  console.log('long: ', long);
-
-  // displays and settings for navionics map
-  let webapi = new JNC.Views.BoatingNavionicsMap({
-    tagId: '.test_map_div',
-    center: [  lat, long ],
-    depthUnit: JNC.DEPTH_UNIT.FEET,
-    distanceUnit: JNC.DISTANCE_UNIT.MILES,
-    // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
-    navKey: 'Navionics_webapi_03299'
-  });
-  webapi.showSonarControl(true);
 
   // query search button click listener
   self.searchQuery = (query) => {
