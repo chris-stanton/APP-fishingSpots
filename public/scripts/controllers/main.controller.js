@@ -4,8 +4,8 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   // setting variables and variable containers
   const self = this;
 
-  let lat = '';
-  let long = '';
+  let lat = 0;
+  let long = 0;
   let coords = {};
 
   // return info from server side API call to Dark Sky weather
