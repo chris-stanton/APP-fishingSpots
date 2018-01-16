@@ -47,7 +47,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
     center: [ lat, long ],
     depthUnit: JNC.DEPTH_UNIT.FEET,
     distanceUnit: JNC.DISTANCE_UNIT.MILES,
-    // safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
+    safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
     navKey: 'Navionics_webapi_03299'
   });
   webapi.showSonarControl(true);
