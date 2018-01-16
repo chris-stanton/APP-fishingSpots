@@ -17,8 +17,8 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
     navigator.geolocation.getCurrentPosition(function(position) {
       console.log('Local position API response: ', position);
       // geolocation response setting to variable
-      lat = position.coords.latitude;
-      long = position.coords.longitude;
+      let lat = position.coords.latitude;
+      let long = position.coords.longitude;
 
       // creating object to send sever side
       let coords = {
