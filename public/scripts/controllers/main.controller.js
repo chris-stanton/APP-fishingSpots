@@ -53,6 +53,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   webapi.showSonarControl(true);
 
 
+
   // query search button click listener
   self.searchQuery = (query) => {
     // checking for user query null values
