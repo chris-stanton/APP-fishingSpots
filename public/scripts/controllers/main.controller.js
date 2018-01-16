@@ -21,12 +21,11 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       // geolocation response setting to variable
       let lat = position.coords.latitude;
       let long = position.coords.longitude;
-      console.log(lat, long);
-
+  
       // creating object to send sever side
       let coords = {
-        lat: lat.toFixed(1),
-        long: long.toFixed(1)
+        lat: lat.toFixed(0),
+        long: long.toFixed(0)
       }
 
       console.log(coords);
