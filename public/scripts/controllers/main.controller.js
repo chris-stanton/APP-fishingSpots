@@ -21,11 +21,11 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       // geolocation response setting to variable
       let lat = position.coords.latitude;
       let long = position.coords.longitude;
-  
+
       // creating object to send sever side
       let coords = {
-        lat: lat.toFixed(0),
-        long: long.toFixed(0)
+        lat: lat.toFixed(1),
+        long: long.toFixed(1)
       }
 
       console.log(coords);
@@ -44,7 +44,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
   // displays and settings for navionics map
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
-    center: [  coords.lat, coords.long ],
+    center: [  parseInt(coords.lat), parseInt(coords.long) ],
     depthUnit: JNC.DEPTH_UNIT.FEET,
     distanceUnit: JNC.DISTANCE_UNIT.MILES,
     safetyDepth: JNC.SAFETY_DEPTH_LEVEL.FEET_20,
