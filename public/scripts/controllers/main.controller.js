@@ -51,9 +51,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
     navKey: 'Navionics_webapi_03299'
   });
   webapi.showSonarControl(true);
-  webapi.showDepthUnitControl(true);
-
-
+  
 
   // query search button click listener
   self.searchQuery = (query) => {
