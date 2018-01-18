@@ -41,6 +41,7 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
       console.log('geolocation was not supported');
   };
 
+
   // displays and settings for navionics map
   let webapi = new JNC.Views.BoatingNavionicsMap({
     tagId: '.test_map_div',
@@ -51,7 +52,8 @@ myApp.controller('MainController',['InitFactory', 'SpeciesFactory', 'UserService
     navKey: 'Navionics_webapi_03299'
   });
   webapi.showSonarControl(true);
-  
+
+
 
   // query search button click listener
   self.searchQuery = (query) => {
